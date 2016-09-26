@@ -1,0 +1,441 @@
+/* Impostazioni Generali */
+html  {	
+	box-sizing: border-box;	
+	font-family: 'Lato', serif;
+	font-size: 1.5em;
+}
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+	padding: 0;
+	margin: 0;
+}
+body {
+	/font-family: Source Sans Pro;
+	/font-size: 30px;
+}
+
+/* --------------- CONTAINER --------------- */
+
+/* Definizione del container generale parent */
+/* display flex e direzione cross axis */
+.flex__container {
+	display: flex;
+	max-width: 100vw;
+	height: 100vh;
+	flex-direction: column;
+	/* Disabilitazione scrolling menu aperto */
+	/*position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;*/
+}
+
+/* --------------- HEADER --------------- */
+
+/* Definizione header della pagina */
+/* child 1 del parent flex_container */
+/* altezza 100% viewport con immagine di sfondo */
+.flex__header {
+	flex: 1 0 auto; /* flex-grow | flex-shrink | flex-basis*/
+	height: 100vh;
+	background: url(../img/hero-1.jpg) no-repeat center center;
+	background-size: cover;
+	/* Definizione come contenitore parent */
+	/* Direzione main axis e flex-wrap nowrap */
+	display: flex;
+	flex-flow: column nowrap;
+}
+/* Definizione top header della pagina */
+/* Direzione main axis e flex-wrap nowrap */
+/* child 1 del parent flex__header */
+/* Allineamento cross axis space-around */
+.flex__top {
+	flex: 1 0 auto; /* flex-grow | flex-shrink | flex-basis*/
+	/*background-color: rgb(129,184,219);*/
+	background-color: rgba(232,217,178,.98);
+	/* Definizione come contenitore parent */
+	/* Direzione main axis */
+	/* Allineamento cross axis center */
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	max-height: 90px;
+	padding: 0 .5rem 0 0;
+	/: ;
+	border-bottom: 1px solid #FFF;
+}
+/* Definizione logo della pagina */
+/* child 1 del parent flex__top */
+/* flex-grow 1 flex-shrink 1 e flex-basis auto */
+.flex__logo {
+	flex: 0 1 auto; /* flex-grow | flex-shrink | flex-basis*/
+	height: 64px;
+	max-width: 262px;
+	cursor: pointer;
+	fill: #FFF;
+	margin-left: 1.5em;
+}
+/* Definizione menu della pagina */
+/* child 1 del parent flex__top */
+/* flex-grow 0 flex-shrink 1 e flex-basis auto */
+.flex__menu {
+	flex: 1 0 auto; /* flex-grow | flex-shrink | flex-basis*/
+	text-align: right;
+	padding:0;
+	/* Definizione come contenitore parent */
+	/* Direzione cross axis */
+	/* Allineamento cross axis end_start */
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+}
+/* Child 1-2-3 del parent flex__menu */
+.flex__linea {
+	width: 50px;
+	height: 2px;
+	margin: .2em .5em;
+	background-color: #fff;
+	cursor: pointer;
+}
+
+/* Definizione main dell'header */
+/* child 2 del parent flex__header */
+.flex__main__header {
+	flex: 4 0 auto;
+	/*background-color: rgb(129,184,219);*/
+	background-color: rgba(232,217,178,.98);
+	border-top: 1px solid rgba(255,255,255,.5);
+	/* Definizione come contenitore parent*/
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: center;
+	visibility: hidden;
+	opacity: 0;
+	transition: all .5s ease;
+}
+.flex__menu__list {
+	min-width: 277px;
+	/text-align: center;
+	/background-color: #fff;
+	color: #FFF;
+	/font-family: 'Lato', Sans Serif;
+	font-size: 1.75rem;
+	text-transform: uppercase;
+	line-height: 1.8rem;
+	letter-spacing: .4em;
+	margin: 0 1.2em 0 1.2em;
+}
+.flex__menu__list ul {
+	list-style: none;
+	font-size: .6rem;
+	letter-spacing: .15em;
+	margin: 0 0 0 1.5em;
+}
+/* Definizione main dell'header */
+/* child 3 del parent flex__header */
+.flex__footer__header {
+	flex: 0 0 auto;
+	background-color: rgba(232,217,178,.98);
+	min-height: 80px;
+	border: 1px solid rgba(255,255,255,.5);
+	/* Definizione come contenitore parent */
+	/* Direzione cross axis */
+	/* Allineamento cross axis end_start */
+	display: flex;
+	flex-flow: row wrap;
+	align-items: stretch;
+	visibility: hidden;
+	opacity: 0;
+	transition: all .5s ease;
+}
+
+.twitter, .facebook {
+	flex: 1;
+	height: 80px;
+	max-width: 80px;
+	fill: #FFF;
+	border-right: 1px solid #FFF;
+	align-self: center;
+	transition: fill 1.3s ease-in-out;
+	-moz-transition: fill 1.3s ease-in-out;
+	-webkit-transition: fill 1.3s ease-in-out;
+}
+.twitter:hover {
+	fill: rgb(29,161,242);
+}
+.facebook:hover {
+	fill: rgb(59, 89, 152);
+}
+.credits {
+	flex: 4;
+	align-self: center;
+	text-align: right;
+	color: rgb(255,255,255);
+	font-size: .7em;
+	letter-spacing: .3em;
+	margin-right: 1.5em
+}
+
+
+/* --------------- MAIN PAGE --------------- */
+
+/* Definizione main della pagina */
+/* child 1 del parent flex_container */
+/* flex-grow 1 flex-shrink 0 e flex-basis auto */
+.flex__main {
+	flex: 1 0 auto; /* flex-grow | flex-shrink | flex-basis*/
+	min-height: 100vh;
+	padding: .9em 0 .9em 0;
+	/* Definizione come contenitore parent */
+	/* Direzione main axis e flex-wrap wrap */
+	/* altezza minima 100% viewport allineamento main axis center*/
+	display: flex;
+	flex-flow: row wrap; /* flex-direction | flex-wrap */
+	justify-content: center;
+	align-items: flex-start;
+	/*visibility: hidden;*/
+}
+/* Definizione box immagini all'interno del contenitore parent */
+/* child 0 del parent flex_main */
+.flex__box {
+	background-color: transparent;
+	max-width: 450px;
+	height: auto;
+	border: 1px solid #FFF;
+	margin: 0 .5em .8em .5em;
+	padding: 0;
+}
+.flex__box img {
+	width: 100%;
+	height: 100%;
+}
+
+/* --------------- FOOTER --------------- */
+
+/* Definizione footer della pagina */
+/* child 2 del parent flex_container */
+/* flex-grow 1 flex-shrink 0 e flex-basis auto */
+.flex__footer {
+	flex: 1 0 auto; /* flex-grow | flex-shrink | flex-basis*/
+	min-height: 5em;
+	background-color: rgba(232, 217, 178, 0.5);
+}
+
+/**/
+.menu-aperto .flex__main__header {
+	opacity: .95;
+	visibility: visible;
+}
+.menu-aperto .flex__footer__header {
+	opacity: 1;
+	visibility: visible;
+}
+.menu-aperto .flex__container {
+	/* Disabilitazione scrolling menu aperto */
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+
+
+
+.box__immagine {
+	position: relative;
+	list-style: none;
+	text-align: center;
+}
+
+/* Common style*/ 
+.box__immagine figure {
+	position: relative;
+	float: left;
+	overflow: hidden;
+  /*margin: 10px 1%;
+	min-width: 320px;
+	max-width: 480px;
+	max-height: 360px;
+	width: 48%;*/
+	height: auto;
+	background: #3085a3;
+	text-align: center;
+	cursor: pointer;
+}*/
+
+.box__immagine figure img {
+	position: relative;
+	display: block;
+	min-height: 100%;
+	max-width: 100%;
+	opacity: 0.8;
+}
+
+.box__immagine figure figcaption {
+	padding: 0;
+	color: #fff;
+	text-transform: capitalize;
+	font-size: 1.45em;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.box__immagine figure figcaption::before,
+.box__immagine figure figcaption::after {
+	pointer-events: none;
+}
+
+.box__immagine figure figcaption,
+.box__immagine figure figcaption > a {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/* Anchor will cover the whole item by default */
+/* For some effects it will show as a button */
+.box__immagine figure figcaption > a {
+	z-index: 1000;
+	text-indent: 200%;
+	white-space: nowrap;
+	font-size: 0;
+	opacity: 0;
+}
+
+.box__immagine figure h2 {
+	letter-spacing: 0.05em;
+	font-weight: 400;
+	color:#FFF;
+  font-size: 2.7em;
+	font-family: 'Tangerine', cursive;
+
+}
+
+.box__immagine figure h2 span {
+	font-weight: 800;
+}
+
+.box__immagine figure h2,
+.box__immagine figure p {
+	margin: 0;
+}
+
+.box__immagine figure p {
+	letter-spacing: 1px;
+	font-size: 55%;
+}
+/*---------------*/
+/***** Lexi *****/
+/*---------------*/
+
+figure.effect-lexi {
+	background: -webkit-linear-gradient(-45deg, #000 0%,#fff 100%);
+	background: linear-gradient(-45deg, #000 0%,#fff 100%);
+}
+
+figure.effect-lexi img {
+	margin: -10px 0 0 -10px;
+	max-width: none;
+	width: -webkit-calc(80% + 10px);
+	width: calc(100% + 10px);
+	opacity: 0.9;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: translate3d(10px,10px,0);
+	transform: translate3d(10px,10px,0);
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+figure.effect-lexi figcaption::before,
+figure.effect-lexi p {
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+}
+
+figure.effect-lexi figcaption::before {
+	position: absolute;
+	right: 15px;
+	bottom: -80px;
+	width: 420px;
+	height: 420px;
+	border: 1px solid #fff;
+	border-radius: 50%;
+	box-shadow: 0 0 0 500px rgba(255,255,255,0.3);
+	content: '';
+	opacity: 0;
+	-webkit-transform: scale3d(0.5,0.5,1);
+	transform: scale3d(0.5,0.5,1);
+	-webkit-transform-origin: 50% 50%;
+	transform-origin: 50% 50%;
+}
+
+figure.effect-lexi:hover img {
+	opacity: 0.6;
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+figure.effect-lexi h2 {
+	text-align: center;
+	padding: 0.7em 0 1em 0;
+	-webkit-transition: -webkit-transform 0.35s;
+	transition: transform 0.35s;
+	-webkit-transform: translate3d(5px,5px,0);
+	transform: translate3d(5px,5px,0);
+}
+
+figure.effect-lexi p {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	padding: 0 1.5em 1.5em 0;
+	width: 100px;
+	text-align: right;
+	opacity: 0;
+	-webkit-transform: translate3d(20px,20px,0);
+	transform: translate3d(20px,20px,0);
+}
+
+figure.effect-lexi a {
+	color:#FFF;
+	text-decoration:none;
+}
+
+figure.effect-lexi a:hover {
+	color:#FFF;
+}
+
+figure.effect-lexi a:before {
+	content: "";
+	  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+figure.effect-lexi:hover figcaption::before {
+	opacity: 1;
+	-webkit-transform: scale3d(1,1,1);
+	transform: scale3d(1,1,1);
+}
+
+figure.effect-lexi:hover h2,
+figure.effect-lexi:hover p {
+	opacity: 1;
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}

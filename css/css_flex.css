@@ -1,0 +1,82 @@
+html  {	box-sizing: border-box;	
+	font-family: 'Lato', serif;
+	font-size: 1.5em;
+}
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+	padding: 0;
+	margin: 0;
+}
+
+.flex__body {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	width: 100vw;
+}
+
+.flex__header {
+	height: 100vh;
+	display: flex;
+	background: url(../img/hero-1.jpg) no-repeat center center;
+	background-size: cover;
+	order: 0;
+	-webkit-order: 0;
+}
+/* Parent */
+.flex__top {
+	flex:1;
+	display: flex;
+	justify-content: space-between;
+	-webkit-flex-flow: row wrap;
+	-moz-flex-flow: row wrap;
+	-ms-flex-flow: row wrap;
+	-o-flex-flow: row wrap;
+	flex-flow: row wrap;
+	background-color: rgba(129,184,219,.7);
+	max-height: 80px;
+}
+/* flex__top Child 1 */
+.flex__logo {
+	flex: 1;
+	padding: .6rem .6rem .6rem 1.1rem;
+	cursor: pointer;
+}
+.flex__logo svg {
+	height: 100%;
+	width: 7rem;
+}
+/* flex__top Child 2 */
+.flex__menu {
+	flex: 3;
+	padding: .6rem;
+	align-self: center;
+	text-align: right;
+	/* Parent */
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	
+}
+/* flex__menu Child 1-2-3 */
+.flex__menu .flex__icona {
+	width: 50px;
+	height: 2px;
+	margin: .2rem;
+	background-color: #fff;
+	cursor: pointer;
+
+}
+
+.flex__main {
+	background-color: #11f05f;
+	order: 2;
+	-webkit-order: 2;
+}
+
+.flex__footer {
+	background-color: #df2f44;
+	margin-top: auto;
+}

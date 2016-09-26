@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="css/css_flex.css" media="screen">
+<title>Menu Navigation</title>
+</head>
+<body>
+	<header class="header">
+		<section class="header-top"></section>
+		<!--Logo Infopoint Viaggi -->
+		<section class="logo">
+			<object>	  
+			  <embed src="img/logo_text.svg" alt=" Logo Infopoint Viaggi">
+			</object>
+		</section>
+		<!-- Icona Menu Destra-->
+		<section class="menu-icona">
+			<span class="icona"></span>
+		</section>
+		<!-- Menu overlay -->
+		<section class="menu-overlay">
+		</section>
+		<!-- Lista Menu -->
+		<nav class="menu">
+		<ul class="menu__ul">
+			<li class=""><a href="#">destinazioni</a></li>
+			<li class=""><a href="#">viaggi</a></li>
+			<li class=""><a href="#">aziende</a></li>
+			<li class=""><a href="#">utility</a></li>
+			<li class=""><a href="#">contatti</a></li>				
+		</ul>
+		</nav>
+		<section class="row header-bottom">
+			<div class="col-md-6 social">
+				<svg version="1.1" width="30px" height="30px" id="Livello_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+					 viewBox="0 0 33.6 72" style="enable-background:new 0 0 33.6 72;" xml:space="preserve">
+				<style type="text/css">
+					.st0{fill:#FFFFFF;}
+				</style>
+				<path class="st0" d="M7.3,13.9v9.9H0V36h7.3v36h14.9V36h10c0,0,0.9-5.8,1.4-12.2H22.2v-8.3c0-1.2,1.6-2.9,3.2-2.9h8.1V0H22.5
+					C6.9,0,7.3,12.1,7.3,13.9L7.3,13.9z M7.3,13.9"/>
+				</svg>
+			</div>
+			<div class="col-md-6 social">
+				<svg version="1.1" width="30px" height="30px" id="Livello_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+					 viewBox="0 0 33.6 72" style="enable-background:new 0 0 33.6 72;" xml:space="preserve">
+				<style type="text/css">
+					.st0{fill:#FFFFFF;}
+				</style>
+				<path class="st0" d="M7.3,13.9v9.9H0V36h7.3v36h14.9V36h10c0,0,0.9-5.8,1.4-12.2H22.2v-8.3c0-1.2,1.6-2.9,3.2-2.9h8.1V0H22.5
+					C6.9,0,7.3,12.1,7.3,13.9L7.3,13.9z M7.3,13.9"/>
+				</svg>
+			</div>
+		</section>
+	</header>
+	<!-- Fine Header-->
+	<main class="main-content">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias rem voluptates reiciendis facilis qui quos, tempore maiores aliquam in, esse eveniet, cumque. Corrupti tenetur culpa, cum a, accusamus provident nostrum!</p>
+		<p>Quibusdam mollitia iusto perferendis pariatur veritatis consequuntur delectus nemo placeat, dolores? Minus laudantium at natus doloribus dignissimos ipsa blanditiis minima iusto quis cumque nisi veritatis cupiditate iste, nemo repudiandae quod.</p>
+		<p>Molestiae cum iure maxime necessitatibus rem. Voluptate nulla numquam accusantium dolorum cupiditate maxime, perspiciatis nostrum explicabo maiores ipsam suscipit placeat vitae asperiores perferendis debitis optio incidunt id aperiam, laudantium a!</p>
+		<p>Reiciendis error mollitia exercitationem velit earum iure hic ipsam, harum qui molestiae! Suscipit, reprehenderit. Exercitationem natus obcaecati, porro similique eum temporibus totam veritatis, minus alias quam impedit, beatae praesentium ullam.</p>
+		<p>Quisquam, reprehenderit officia at assumenda itaque sit quasi maiores provident. Quaerat tempore, facere, ratione eveniet voluptate nulla repellendus minus a asperiores laborum nostrum praesentium, sequi laudantium molestias maxime dolorum error.</p>
+		<p>Iure commodi, obcaecati ipsam in aliquam? Perferendis distinctio molestiae labore cupiditate, dolorem porro ut libero voluptatibus quasi autem qui tenetur id! Excepturi unde voluptas rem enim in. Optio, dolorum, vel!</p>
+		<p>Est sunt in, excepturi repellendus molestias obcaecati consequuntur doloremque architecto ex iusto expedita qui veniam quidem quas deserunt consectetur cum ratione, dicta deleniti voluptates ea, id neque. Tempora, excepturi, quaerat.</p>
+		<p>Ratione, architecto iste facilis distinctio, fuga mollitia nemo animi. Sed nihil animi, deleniti, incidunt maxime adipisci? Dignissimos neque corporis, ipsum distinctio ab libero delectus esse mollitia. Accusamus quaerat itaque est.</p>
+		<p>Tenetur consequatur distinctio at ipsam aspernatur nihil facilis fugiat repellat odio aut neque quasi reprehenderit quibusdam laudantium, iure, fuga eveniet minima provident officiis adipisci, nam rem molestiae totam. Praesentium, est.</p>
+		<p>Eos perferendis voluptatum, eum voluptatibus corporis rem labore harum, voluptatem, ipsum accusamus mollitia unde laborum! Reiciendis, odio ab maiores voluptate, non voluptatum aliquam, laborum corporis aliquid deserunt autem dolore, accusantium.</p>
+	</main>
+	<!-- Fine Main Content-->
+
+<!-- Sorgente Jquery -->
+<script src="js/jquery.js"></script>
+<!-- Script Jquery -->
+<script>
+	$(function(){
+		$(".menu-icona, .menu-overlay, .header-top, .header-bottom, .social").click(function(){
+			$("body").toggleClass("menu-aperto");
+		});
+	});
+</script>
+</body>
+</html>

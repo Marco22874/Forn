@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "../scss/style.css",
+	"sources": [
+		"../scss/style.scss"
+	],
+	"sourcesContent": [
+		"$grey: #e3e3e3;\r\n\r\nbody {\r\n\tbackground-color: $grey;\r\n}"
+	],
+	"mappings": ";AAEA,AAAA,IAAI,CAAC;EACJ,gBAAgB,EAHV,OAAO;CAIb",
+	"names": []
+}
